@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Understanding Positions in CSS</title>
+    <!-- CSS Start -->
+    <style>
+        .parent{
+            background-color: #242B2E;
+            padding: 20px;
+            position: relative;
+            height: 150vh;
+        }
+        .box-1{
+            background-color: #E07C24;
+            padding: 10px;
+        }
+        .box-2{
+            background-color: #FF6666;
+            padding: 10px;
+            position: sticky;
+            top: 0px;
+        }
+        .box-3{
+            background-color: #35BDD0;
+            padding: 10px;
+        }
+        .box-4{
+            background-color: #5A20CB;
+            padding: 10px;
+        }
+    </style>
+    <!-- CSS Ends -->
+</head>
+<body>
+    <div class="parent">
+        <div class="box-1">Box-01</div>
+        <div class="box-2">Box-02</div>
+        <div class="box-3">Box-03</div>
+        <div class="box-4">Box-04</div>
+    </div>
+</body>
+</html>
+<!-- 
+    Notes:
+
+    What should you know before understanding Positions :
+
+    why positioning ?
+    to position the elements for the better delivery of the content
+
+    => document flow : arrangement of the elements specified as per the html document being written
+
+    => placement properties : placing elements at a specific location we use placement properties
+    1. top
+    2. bottom
+    3, right
+    4. left
+
+    Types of positions available :
+
+    1. static : default => follows the document flow, no placement properties can be applied.
+
+    2. relative => follows the document flow, placement properties can be applied, placement properties will be applied from the initial position of the document flow.
+
+    3. absolute => it comes out of the document flow, no empty spaces are allowed, placement properties are allowed, placement property will be applied as per the immediate parent whose position is not static.
+
+    4. fixed  => it comes out of the document flow, no empty spaces are allowed, placement properties are allowed, placement properties are applied as per the body or view port.
+
+    5. sticky => it follows the document flow and behaves as per the condition specified
+
+        => Before the condition is met : relative nature is seen
+        => After the condition is met : fixed nature is seen
+
+        sticky = relative + fixed [ based on the condition given ]
+
+
+ -->
